@@ -1,0 +1,4 @@
+{% for social in request.socials %}
+    <li><a href="{{social.link}}" class="icon brands style2 {{social.icon}}"><span class="label">{{social.name}}</span></a>
+    </li>
+{% endfor %}

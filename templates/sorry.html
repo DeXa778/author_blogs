@@ -1,0 +1,26 @@
+{% extends 'layout5.html' %}
+{% load static %}
+
+{% block menu %}
+        {% include 'menu.html' %}
+{% endblock %}
+
+
+{% block logo %}
+
+    <a href="/thanks" class="logo">
+    <span class="symbol"><img src="{% static 'blog/images/logo.png' %}" alt="" /></span><span class="title">Перезавантажити сторінку <</span>
+    </a>
+{% endblock %}
+
+
+{% block content %}
+    <h1 align="center">SORRY, U DID SOMETHING NOT CORRECT:(</h1>
+    <div class="inner">
+        <a href="/"><h2 align="center">НА ГОЛОВНУ</h2></a>
+    </div>
+{% endblock %}
+
+{% block socials %}
+    {% include 'social.html' %}
+{% endblock %}

@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="{% static 'a/assets/css/main.css' %}">
+		<noscript><link rel="stylesheet" href="{% static 'a/assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							
+							{% block menu %}
+							{% endblock %}
+						</ul>
+					</nav>
+	
+							{% block content %}
+							{% endblock %}
+					
+				<!-- Footer -->
+							<ul class="icons">
+					<footer class="wrapper style1 align-center">
+						<div class="inner">
+								<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+							<p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'a/assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'a/assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'a/assets/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'a/assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'a/assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'a/assets/js/util.js' %}"></script>
+			<script src="{% static 'a/assets/js/main.js' %}"></script>
+			<script src="{% static 'blog/assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'blog/assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'blog/assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'blog/assets/js/util.js' %}"></script>
+			<script src="{% static 'blog/assets/js/main.js' %}"></script>
+			<!--  -->
+
+	</body>
+</html>

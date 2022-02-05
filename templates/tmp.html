@@ -1,0 +1,37 @@
+{% extends 'lyt4.html' %}
+{% load static %}
+{% block title %}
+TEST PAGE
+{% endblock %}
+
+
+{% block menu %}
+        {% include 'menu.html' %}
+{% endblock %}
+
+
+
+
+{% block content %}
+<!-- Wrapper -->
+            <div id="wrapper" class="divided">
+
+                <!-- One -->
+                    <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+                        <div class="content">
+                            <a href="/tmp/">Перезавантажити сторінку</a>
+
+
+
+                            <h1>Some TExt here</h1>
+                            <p class="major">SUper siteEEE</p>
+                            <ul class="actions stacked">
+                                <li><a href="/" class="button big wide smooth-scroll-middle">НА ГОЛОВНУ</a></li>
+                            </ul>
+                        </div>
+                        <div class="image">
+                            <img src="{% static '/a/images/banner.jpg' %}" alt="" />
+                        </div>
+                    </section>
+				</div>
+{% endblock %}

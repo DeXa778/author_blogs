@@ -1,0 +1,5 @@
+{% for menuitem in request.menuitems %}
+
+	<li><a href="{{menuitem.link}}">{{menuitem.name}}</a></li>
+
+{% endfor %}

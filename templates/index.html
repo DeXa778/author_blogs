@@ -1,0 +1,61 @@
+{% extends 'layout5.html' %}
+{% load static %}
+
+
+
+{% block menu %}
+	{% include 'menu.html' %}
+{% endblock %}
+
+{% block logo %}
+
+	<a href="/" class="logo">
+	<span class="symbol"><img src="{% static 'blog/images/logo.png' %}" alt="" /></span><span class="title">Перезавантажити сторінку <</span>
+	</a>
+{% endblock %}
+
+
+{% block content %}
+<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1>Це блог користувача <a href="/tmp">-DeXa-</a>.</h1>
+								<p>Тут ви зможете знайти дуже багато корисної інформації</p>
+							</header>
+							<section class="tiles">
+
+                                {% if articles %}
+
+                                {% for article in articles %}
+								<article class="style1">
+									<span class="image">
+										<img src="/{{article.image}}" alt="" />
+									</span>
+									<a href="/article/{{article.id}}">
+										<h2>{{article.title}}</h2>
+										<div class="content">
+											<p>{{article.text}}</p>
+										</div>
+									</a>
+								</article>
+                                {% endfor %}
+
+
+                                {% else %}
+                                <h2 style="margin-left: 45%;">НЕМАЄ ЗАПИСІВ</h2>
+
+                                {% endif %}
+
+
+
+							</section>
+						</div>
+					</div>
+                    {% endblock %}
+
+{% block socials %}
+    {% include 'social.html' %}
+{% endblock %}
+
+

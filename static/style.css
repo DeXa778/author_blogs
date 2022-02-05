@@ -1,0 +1,9 @@
+body{
+	background-color: #FFCCCC;
+}
+
+
+.block1{
+	background-color: purple;
+	display: inline-block;
+}

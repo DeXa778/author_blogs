@@ -1,0 +1,37 @@
+{% extends 'layout5.html' %}.
+{% load static %}
+
+
+{% block logo %}
+
+    <a href="/create" class="logo">
+    <span class="symbol"><img src="{% static 'blog/images/logo.png' %}" alt="" /></span><span class="title">Перезавантажити сторінку <</span>
+    </a>
+{% endblock %}
+{% block menu %}
+    {% include 'menu.html' %}
+{% endblock %}
+
+{% block content %}
+
+<h1>Форма доддання записів</h1>
+
+
+
+<form enctype = "multipart/form-data" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    {{form.errors}}
+    <input type="submit" value="Send message">
+</form>
+
+
+
+
+
+
+
+{% endblock %}
+
+{% block socials %}
+    {% include 'social.html' %}
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'layout5.html' %}
+{% load static %}
+
+{% block menu %}
+	{% include 'menu.html' %}
+{% endblock %}
+
+{% block logo %}
+
+    <a href="/article/1" class="logo">
+    <span class="symbol"><img src="{% static 'blog/images/logo.svg' %}" alt="" /></span><span class="title">Перезавантажити сторінку <</span>
+    </a>
+{% endblock %}
+
+{% block content %}
+
+
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<span class="image main"><img src="/{{article.image}}" alt="" /></span>
+							<h1>{{article.title}}</h1>
+							<p>{{article.text}}</p>
+							<h4>Aтори статті:</h4>
+							{% for author in article.author.all %}
+								<a href="/author/{{author.id}}">{{author.username}}</a>
+							{% endfor %}
+						</div>
+						<div class="inner">
+                            <a href="/">НА ГОЛОВНУ</a>
+                        </div>
+					</div>
+{% endblock %}
+{% block socials %}
+    {% include 'social.html' %}
+{% endblock %}
+
+
